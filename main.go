@@ -1,7 +1,7 @@
 package main
 
 import (
-	"myplugin/controller"
+	"glugin/controller"
 
 	"github.com/neovim/go-client/nvim/plugin"
 )

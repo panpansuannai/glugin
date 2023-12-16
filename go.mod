@@ -1,4 +1,4 @@
-module myplugin
+module glugin
 
 go 1.19
 

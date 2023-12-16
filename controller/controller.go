@@ -2,7 +2,7 @@ package controller
 
 import (
 	"fmt"
-	"myplugin/utils"
+	"glugin/utils"
 	"time"
 
 	"github.com/martinlindhe/notify"
