@@ -58,6 +58,12 @@ func (ctrl *Controller) scheduleTask(args []string) (string, error) {
 }
 
 func (ctrl *Controller) startBackGroupJobs() {
+	// nvim worker
+	go func() {
+		for range time.Tick(time.Second) {
+			ctrl.Nvim.ExecLua(`vim.oxi.nvim_worker()`, nil)
+		}
+	}()
 	go func() {
 		for range time.Tick(time.Second * 10) {
 			// notify.Notify("neovim", "", "该休息了哦", "")
